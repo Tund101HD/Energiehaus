@@ -1,0 +1,320 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #CDDDDD;
+    padding: 0px;
+    margin: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /*background-image: url('https://source.unsplash.com/1600x900/?weather');*/
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    width: 100%;
+    min-width: 500px;
+    margin: 0px;
+}
+.header{
+    width: 100%;
+    height: 200px;
+
+    text-align: center;
+    color: lightskyblue;
+    line-height: 200px;
+    font-size: xxx-large;
+
+    background-color: slateblue;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+
+
+.box1 a{
+    position: absolute;
+    object-fit: contain;
+    width: 33%;
+    left: 0px;
+    height: 30px;
+
+    display: inline-block;
+    text-align: center;
+
+    padding: 15px 30px;
+    color: rgba(122, 17, 91, 1);
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transform: initial;
+    background: rgba(255, 0, 170, 1);
+}
+.box1 a:hover{
+    color: rgba(94, 7, 65, 0.822);
+    box-shadow: 0 0 10px, 0 0 40px rgba(255, 0, 170, 0.822), 0 0 80px rgba(255, 0, 170, 0.822);
+    transition-delay: .1s;
+}
+.box1 a span{
+    position: absolute;
+    display: block;
+}
+.box1 a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box1 a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.box1 a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box1 a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.box1 a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box1 a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.box1 a span:nth-child(4){
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box1 a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+
+.box2 a{
+    position: absolute;
+    object-fit: contain;
+    width: 33%;
+    height: 30px;
+
+    display: inline-block;
+    text-align: center;
+    left: 33%;
+
+    padding: 15px 30px;
+    color: rgba(122, 17, 91,1);
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transform: initial;
+    background: rgba(255, 0, 170, 1);
+}
+.box2 a:hover{
+    color: rgba(94, 7, 65, 0.822);
+    box-shadow: 0 0 10px, 0 0 40px rgba(255, 0, 170, 0.822), 0 0 80px rgba(255, 0, 170, 0.822);
+    transition-delay: .1s;
+}
+.box2 a span{
+    position: absolute;
+    display: block;
+}
+.box2 a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box2 a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.box2 a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box2 a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.box2 a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box2 a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.box2 a span:nth-child(4){
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box2 a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+.box3 a{
+    position: absolute;
+    object-fit: contain;
+    width: 33%;
+    height: 30px;
+
+    display: inline-block;
+    text-align: center;
+    left: 66%;
+
+    padding: 15px 30px;
+    color: rgba(122, 17, 91,1);
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transform: initial;
+    background: rgba(255, 0, 170, 1);
+}
+.box3 a:hover{
+    color: rgba(94, 7, 65, 0.822);
+    box-shadow: 0 0 10px, 0 0 40px rgba(255, 0, 170, 0.822), 0 0 80px rgba(255, 0, 170, 0.822);
+    transition-delay: .1s;
+}
+.box3 a span{
+    position: absolute;
+    display: block;
+}
+.box3 a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box3 a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.box3 a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box3 a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.box3 a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box3 a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.box3 a span:nth-child(4){
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, rgba(255, 0, 170, 0.822));
+}
+.box3 a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.card1{
+    object-fit: contain;
+    position: absolute;
+    top: 300px;
+    color: #051014;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 2em;
+    margin: 1em;
+    width: 100%;
+    max-width: 420px
+}
+.card2{
+    object-fit: contain;
+    position: absolute;
+    top: 600px;
+    color: #051014;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 2em;
+    margin: 1em;
+    width: 100%;
+    max-width: 420px
+}
+.card3{
+    object-fit: contain;
+    position: absolute;
+    top: 900px;
+    color: #051014;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 2em;
+    margin: 1em;
+    width: 100%;
+    max-width: 420px
+}
+

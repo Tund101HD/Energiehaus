@@ -29,6 +29,24 @@ body::-webkit-scrollbar{
     margin: 0px;
 }
 
+.maincontainer{
+    width: 100%;
+    min-width: 500px;
+
+    height: 1200px;
+    background-color: #CDDDDD ;
+}
+
+.sub{
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    height: 200px;
+
+    background-color: slateblue;
+
+}
+
 
 .box1 a{
     position: absolute;

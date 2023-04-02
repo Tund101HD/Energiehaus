@@ -30,10 +30,6 @@ body::-webkit-scrollbar{
 }
 
 
-
-
-
-
 .box1 a{
     position: absolute;
     object-fit: contain;
@@ -110,8 +106,6 @@ body::-webkit-scrollbar{
     transition: 1s;
     transition-delay: 0.75s;
 }
-
-
 
 
 .box2 a{
@@ -192,7 +186,6 @@ body::-webkit-scrollbar{
 }
 
 
-
 .box3 a{
     position: absolute;
     object-fit: contain;
@@ -269,6 +262,7 @@ body::-webkit-scrollbar{
     transition: 1s;
     transition-delay: 0.75s;
 }
+
 .card1{
     object-fit: contain;
     position: absolute;
@@ -317,4 +311,3 @@ body::-webkit-scrollbar{
     width: 100%;
     max-width: 420px
 }
-

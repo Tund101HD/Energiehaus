@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: #009688;
     padding: 0;
@@ -6,19 +6,25 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
-.container{
+
+.container {
     width: 100%;
     min-width: 500px;
     margin: 0;
 }
-.card1{
+
+
+.card1 {
     object-fit: contain;
     position: absolute;
-    top: 480px;
-    right: 1028px;
+
+    top: 60%;
+    right: 57%;
+
     color: rgb(213, 213, 213);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(5px);
@@ -31,11 +37,14 @@ body::-webkit-scrollbar{
     width: 50%;
     max-width: 200px
 }
-.card2{
+
+.card2 {
     object-fit: contain;
     position: absolute;
-    top: 480px;
-    right: 514px;
+
+    top: 60%;
+    right: 42%;
+
     color: rgb(213, 213, 213);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(5px);
@@ -48,11 +57,14 @@ body::-webkit-scrollbar{
     width: 50%;
     max-width: 200px
 }
-.card3{
+
+.card3 {
     object-fit: contain;
     position: absolute;
-    top: 480px;
-    right: 0;
+
+    top: 60%;
+    right: 27%;
+
     color: rgb(213, 213, 213);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(5px);
@@ -65,14 +77,17 @@ body::-webkit-scrollbar{
     width: 50%;
     max-width: 200px
 }
-.banner{
+
+
+.banner {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://source.unsplash.com/1600x900/?weather');
     background-size: cover;
     background-position: center;
 }
-.navbar{
+
+.navbar {
     width: 85%;
     margin: auto;
     padding: 35px 0;
@@ -80,23 +95,27 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: space-between;
 }
-.logo{
-    width: 200px;
+
+.logo {
+    width: 300px;
     height: 100px;
     cursor: pointer;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
 }
-.navbar ul li::after{
+
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -104,12 +123,14 @@ body::-webkit-scrollbar{
     position: absolute;
     left: 0;
     bottom: -10px;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
-.navbar ul li:hover::after{
+
+.navbar ul li:hover::after {
     width: 100%;
 }
-.content{
+
+.content {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -117,16 +138,20 @@ body::-webkit-scrollbar{
     text-align: center;
     color: rgba(255, 255, 255, 1);
 }
-.content h1{
+
+.content h1 {
     font-size: 70px;
     margin-top: 80px;
 }
-.content p{
+
+.content p {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
 }
-button{
+
+
+button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -140,7 +165,8 @@ button{
     position: relative;
     overflow: hidden;
 }
-button span{
+
+button span {
     background: #009688;
     height: 100%;
     width: 0;
@@ -151,9 +177,11 @@ button span{
     z-index: -1;
     transition: 0.5s;
 }
-button:hover span{
+
+button:hover span {
     width: 100%;
 }
-button:hover{
+
+button:hover {
     border: none;
 }

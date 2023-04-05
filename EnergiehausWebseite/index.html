@@ -1,83 +1,72 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!--[if !IE]> -->
-    <link href="index.css" rel="stylesheet" type="text/css" media="only screen" />
-    <link href="index.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px) , only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)" />
+    <link href="index.css" media="only screen" rel="stylesheet" type="text/css"/>
+    <link href="index.css" media="only screen and (max-device-width: 480px) , only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)" rel="stylesheet"
+          type="text/css"/>
     <!-- <![endif]-->
 
     <!--[if IE]> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="index.css" rel="stylesheet"/>
     <!--[endif] -->
 
     <!--[if IEMobile]> -->
-    <link href="index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet"/>
     <!--[endif] -->
     <title>Weather App</title>
-    <script language="javascript" type="text/javascript" src="index.js" defer></script>
-
+    <script defer language="javascript" src="index.js" type="text/javascript"></script>
 </head>
-
 <body>
 
 <div class="container">
-    <header class="header"><div> Die Energiehaus Wetterstation</div></header>
-
-    <div class="box1" onclick="onHome()">
-        <a href="#">
-            <span></span>
-            Home
-        </a>
-    </div>
-
-    <div class="box2" onclick="onInfo()">
-        <a href="#">
-            <span></span>
-            Was ist das Energiehaus?
-        </a>
-    </div>
-
-    <div class="box3">
-        <a href="#">
-            <span></span>
-            Datenbank
-        </a>
-    </div>
-
-    <div class="maincontainer">
-
-        <div class="card1">
-            <div class="weather">
-                <h2 class="heading">Temperatur</h2>
-                <div class="temperature" id="temperature">60°C</div>
-            </div>
-        </div>
-        <div class="card2">
-            <div class="weather">
-                <h2 class="heading">Wind Speed</h2>
-                <div class="wind" id="wind">Wind Speed: 6km/h</div>
-            </div>
-        </div>
-        <div class="card3">
-            <div class="weather">
-                <h2 class="heading">Humidity</h2>
-                <div class="humidity" id="humidity">Humidity: 60%</div>
-            </div>
+    <div class="banner">
+        <div class="navbar">
+            <img class="logo" src='imgs/GISNY.png' onclick="logoClick()">
+            <ul>
+                <li onclick="onHome()"><a href="#">HOME</a></li>
+                <li onclick="onInfo()"><a href="#">DATENBANK</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="sub">
-        <div> Subtext Subtext txetbuS txetbuS </div>
+    <div class="content">
+        <h1>Die Energiehaus Wetterstation</h1>
+        <p>Zugriff auf unsere Daten. Sofort. Von Überall.</p>
+        <div>
+            <button type="button"><span></span>Live Wetterdaten</button>
+            <button type="button"><span></span>Datenbank</button>
+        </div>
     </div>
 
+    <div class="card1">
+        <div class="weather">
+            <h2 class="heading">Temperatur</h2>
+            <div class="temperature" id="temperature">60°C</div>
+        </div>
+    </div>
+
+    <div class="card2">
+        <div class="weather">
+            <h2 class="heading">Wind Speed</h2>
+            <div class="wind" id="wind">Wind Speed: 6km/h</div>
+        </div>
+    </div>
+
+    <div class="card3">
+        <div class="weather">
+            <h2 class="heading">Humidity</h2>
+            <div class="humidity" id="humidity">Humidity: 60%</div>
+        </div>
+    </div>
 </div>
+
 </body>
 </html>

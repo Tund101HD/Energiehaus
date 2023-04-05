@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -23,61 +22,48 @@
     <!--[endif] -->
     <title>Weather App</title>
     <script language="javascript" type="text/javascript" src="index.js" defer></script>
-
 </head>
-
 <body>
-
 <div class="container">
-    <header class="header"><div> Die Energiehaus Wetterstation</div></header>
-
-    <div class="box1" onclick="onHome()">
-        <a href="#">
-            <span></span>
-            Home
-        </a>
+  <div class="banner">
+    <div class="navbar">
+      <img src='https://gisny.eu/images/Organisation/Banner.svg' class="logo"> /*Hier muss noch ein besseres Logo rein*/
+      <ul>
+        <li onclick="onHome()"><a href="#">HOME</a> </li>
+        <li onclick="onInfo()"><a href="#">DATENBANK</a></li>
+      </ul>
     </div>
-
-    <div class="box2" onclick="onInfo()">
-        <a href="#">
-            <span></span>
-            Was ist das Energiehaus?
-        </a>
+  </div>
+    
+  <div class="content">
+    <h1>Die Energiehaus Wetterstation</h1>
+    <p>Hello World.</p>
+    <div>
+      <button type="button"><span></span>Live Wetterdaten</button>
+      <button type="button"><span></span>Datenbank</button>
     </div>
-
-    <div class="box3">
-        <a href="#">
-            <span></span>
-            Datenbank
-        </a>
+  </div>
+    
+  <div class="card1">
+    <div class="weather">
+      <h2 class="heading">Temperatur</h2>
+      <div class="temperature" id="temperature">60°C</div>
     </div>
-
-    <div class="maincontainer">
-
-        <div class="card1">
-            <div class="weather">
-                <h2 class="heading">Temperatur</h2>
-                <div class="temperature" id="temperature">60°C</div>
-            </div>
-        </div>
-        <div class="card2">
-            <div class="weather">
-                <h2 class="heading">Wind Speed</h2>
-                <div class="wind" id="wind">Wind Speed: 6km/h</div>
-            </div>
-        </div>
-        <div class="card3">
-            <div class="weather">
-                <h2 class="heading">Humidity</h2>
-                <div class="humidity" id="humidity">Humidity: 60%</div>
-            </div>
-        </div>
+  </div>
+    
+  <div class="card2">
+    <div class="weather">
+      <h2 class="heading">Wind Speed</h2>
+      <div class="wind" id="wind">Wind Speed: 6km/h</div>
     </div>
-
-    <div class="sub">
-        <div class="subtext"> Hier muss das GISNY Logo hin :) </div>
+  </div>
+    
+  <div class="card3">
+    <div class="weather">
+      <h2 class="heading">Humidity</h2>
+      <div class="humidity" id="humidity">Humidity: 60%</div>
     </div>
-
+  </div>
 </div>
 </body>
 </html>

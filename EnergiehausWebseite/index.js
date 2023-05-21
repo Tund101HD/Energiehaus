@@ -7,7 +7,7 @@ function onReturn(){
 }
 
 function onData(){
- window.location.replace("data.html")
+    window.location.replace("data.html")
 }
 
 function onWetter(){

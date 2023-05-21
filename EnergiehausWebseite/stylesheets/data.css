@@ -3,8 +3,14 @@ body {
     background-color: #009688;
     padding: 0;
     margin: 0;
+
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 body::-webkit-scrollbar {

@@ -4,13 +4,10 @@ import mysql.connector
 
 # Ich weiß zwar nicht wie, aber das funktioniert. DO NOT TOUCH
 def rearrange_time(s: str) -> str:
-    print(s.split(" "))
     third = s.split(".")[2]
     third = third[:4] + ' ' + third[4:]
     s = s.split(".")[0] + "." + s.split(".")[1] + "." + third
-    print(s)
     td = s.split(" ")[0].split(".")
-    print(td)
     a = td[2] + "-" + td[1] + "-" + td[0] + " " + s.split(" ")[1]
     return a
 

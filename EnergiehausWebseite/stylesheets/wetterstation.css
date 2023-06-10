@@ -72,7 +72,24 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
-.container{
-    height: 2900px;
-    background-color: #009688;
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-75%);
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 40px;
+}
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content h2 {
+    font-size: 50px;
+    margin-top: 30px;
 }

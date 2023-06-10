@@ -24,33 +24,34 @@ body::-webkit-scrollbar {
 }
 
 
-.banner {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://source.unsplash.com/1600x900/?weather');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-}
+
 .title{
     line-height: 500px;
-    font-size: xxx-large;
+    font-size: 80px;
     color: white;
 }
 
 .navbar {
     width: 85%;
-    margin-left: 10px;
+    margin-right: 10px;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: absolute;
+    top: 20px;
+    left: 79%;
 }
 
 .logo {
     width: 250px;
     height: 77px;
     cursor: pointer;
+    position: absolute;
+    left: 7%;
+    top: 35px;
+
 }
 
 .navbar ul li {
@@ -85,9 +86,11 @@ body::-webkit-scrollbar {
     width: 100%;
     position: absolute;
     top: 50%;
+    margin-top: 10px;
     transform: translateY(-75%);
     text-align: center;
     color: rgba(255, 255, 255, 1);
+    font-size: 30px;
 }
 
 .content h1 {
@@ -137,5 +140,39 @@ button:hover {
     border: none;
 }
 .site{
-    height: 700px;
+    height: 1080px;
+}
+
+.temperature{
+    height: 400px;
+    width: 650px;
+    float: right;
+    margin-right: 10%;
+}
+
+.humidity{
+    height: 400px;
+    width: 650px;
+    float: left;
+    margin-left: 4%;
+}
+.chart-list-container{
+    font-size: 25px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffd617;
+    padding: 0px;
+
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin-top: 100px;
+}
+
+.chart-list-container ul li{
+    list-style: none;
+    padding: 10px;
 }

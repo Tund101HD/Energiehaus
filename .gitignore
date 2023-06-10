@@ -1,1 +1,4 @@
 .idea
+EnergiehausWebseite/scripts/.env
+.gitignore
+node_modules

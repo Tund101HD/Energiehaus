@@ -22,6 +22,7 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="refresh" content="60">
 
     <!--[if !IE]> -->
     <link href="stylesheets/index.css" media="only screen" rel="stylesheet" type="text/css"/>
@@ -84,7 +85,7 @@
     <div class="card3">
         <div class="weather">
             <h2 class="heading">Feuchtigkeit</h2>
-            <div class="humidity">Humidity: <strong id="humidity"><?php echo $humidity ?></strong>%</div>
+            <div class="humidity">Luftfeuchtigkeit: <strong id="humidity"><?php echo $humidity ?></strong>%</div>
         </div>
     </div>
 </div>

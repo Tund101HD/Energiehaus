@@ -6,6 +6,23 @@ $temperature_value = array();
 $humidity_time = array();
 $humidity_value = array();
 
+
+
+
+$weather_temp_time = array();
+$weather_temp_value = array();
+
+$weather_humid_time = array();
+$weather_humid_value = array();
+
+$weather_airpr_time = array();
+$weather_airpr_value = array();
+
+$weather_windspd_time = array();
+$weather_windspd_value = array();
+
+
+
 $sql = "SELECT Time FROM temperature;";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_array($result)){
@@ -30,5 +47,59 @@ while ($row = mysqli_fetch_array($result)){
     $humidity_value[] = $row["Value"];
 }
 
+
+
+
+
+
+
+
+$sql = "SELECT Time FROM weather_temperature;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_temp_time[] = $row["Time"];
+}
+
+$sql = "SELECT Value FROM weather_temperature;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_temp_value[] = $row["Value"];
+}
+
+
+$sql = "SELECT Time FROM weather_humidity;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_humid_time[] = $row["Time"];
+}
+
+$sql = "SELECT Value FROM weather_humidity;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_humid_value[] = $row["Value"];
+}
+
+$sql = "SELECT Time FROM weather_windspd;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_windspd_time[] = $row["Time"];
+}
+
+$sql = "SELECT Value FROM weather_windspd;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_windspd_value[] = $row["Value"];
+}
+
+$sql = "SELECT Time FROM airpressure;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_airpr_time[] = $row["Time"];
+}
+$sql = "SELECT Value FROM airpressure;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_airpr_value[] = $row["Value"];
+}
 
 

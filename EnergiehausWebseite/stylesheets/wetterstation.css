@@ -67,5 +67,43 @@ body::-webkit-scrollbar {
 
 .container{
     height: 2900px;
-    background-color: #009688;
+    background: linear-gradient(to top, #02e0cb 50%, #031c94 100%);
 }
+
+.head-text{
+    background: linear-gradient(to top, #031c94 10%, #9007be 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.chart-container{
+    margin: 7%;
+}
+
+.temp-chart-holder{
+    height: 400px;
+    width: 650px;
+    float: left;
+
+}
+
+.humid-chart-holder{
+    height: 400px;
+    width: 650px;
+    float: right;
+}
+
+.windspd-chart-holder{
+    height: 400px;
+    width: 650px;
+    float: left;
+}
+
+.airpr-chart-holder{
+    height: 400px;
+    width: 650px;
+    float: right;
+}
+

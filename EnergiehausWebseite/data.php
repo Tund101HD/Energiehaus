@@ -18,11 +18,11 @@
 </style>
 
 <head>
-    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="refresh" content="60">
 
     <!--[if !IE]> -->
     <link href="stylesheets/data.css" media="only screen" rel="stylesheet" type="text/css"/>
@@ -56,15 +56,25 @@
         <div class="title"> Unsere Datenbank </div>
         <div class="content"> Unsere gesammelten Daten </div>
     </div>
+
     <div class="site">
-
-        <div class="chart-list-container">
-            <ul class="chart-list">
-                <li><div class="humidity"><canvas id="humidity-chart"></div></canvas> &nbsp <div class="temperature"><canvas id="temperature-chart"></canvas></div></li>
-            </ul>
-
+        <header style="text-align: center; font-size: 70px; margin-top: 80px; border: 2px darkblue;" class="head-text">
+            Alle Daten unserer Datenbank an einem Ort
+        </header>
+        <div style="margin-left: 20%; margin-right: 20%">
+            <p style="text-align: left; font-size: 30px; color: aliceblue;">
+                Hier tragen wir alle Daten zusammen, die von unseren Sensoren und der Wetterstation
+                ausgelesen werden. Die Daten werden sortiert nach Sensor und Ort, worauf ein Diagramm
+                erstellt wird.
+                <br>
+                <br>
+                <br>
+                Da wir nicht genügend Daten haben, um sinnvolle Diagramme zu erstellen und die Daten
+                in einer anschaulichen Weise darzustellen, wird diese Funktion bis auf weiteres
+                ausgesetzt. <br>
+                Wir bitten um ihr Verständnis.
+            </p>
         </div>
-
     </div>
 </div>
 

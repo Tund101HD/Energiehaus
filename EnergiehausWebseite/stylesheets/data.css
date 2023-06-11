@@ -21,6 +21,7 @@ body::-webkit-scrollbar {
     width: 100%;
     min-width: 500px;
     margin: 0;
+    background: linear-gradient(to top, #02e0cb 60%, #031c94 100%);
 }
 
 
@@ -139,40 +140,15 @@ button:hover span {
 button:hover {
     border: none;
 }
+
+
+.head-text{
+    background: linear-gradient(to top, #031c94 10%, #9007be 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .site{
-    height: 1080px;
-}
-
-.temperature{
-    height: 400px;
-    width: 650px;
-    float: right;
-    margin-right: 10%;
-}
-
-.humidity{
-    height: 400px;
-    width: 650px;
-    float: left;
-    margin-left: 4%;
-}
-.chart-list-container{
-    font-size: 25px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    color: #ffd617;
-    padding: 0px;
-
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    margin-top: 100px;
-}
-
-.chart-list-container ul li{
-    list-style: none;
-    padding: 10px;
+    height: 2900px;
 }

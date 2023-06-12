@@ -107,3 +107,15 @@ body::-webkit-scrollbar {
     float: right;
 }
 
+.gustspd-chart-holder{
+    height: 400px;
+    width: 650px;
+    float: left;
+}
+
+.rain-chart-holder{
+    height: 400px;
+    width: 650px;
+    float: right;
+}
+

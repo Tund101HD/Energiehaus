@@ -21,6 +21,11 @@ $weather_airpr_value = array();
 $weather_windspd_time = array();
 $weather_windspd_value = array();
 
+$weather_rain_time = array();
+$weather_rain_value = array();
+
+$weather_gustspd_time = array();
+$weather_gustspd_value = array();
 
 
 $sql = "SELECT Time FROM temperature;";
@@ -100,6 +105,28 @@ $sql = "SELECT Value FROM airpressure;";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_array($result)){
     $weather_airpr_value[] = $row["Value"];
+}
+
+$sql = "SELECT Time FROM weather_gustspd;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_gustspd_time[] = $row["Time"];
+}
+$sql = "SELECT Value FROM weather_gustspd;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_gustspd_value[] = $row["Value"];
+}
+
+$sql = "SELECT Time FROM weather_rain;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_rain_time[] = $row["Time"];
+}
+$sql = "SELECT Value FROM weather_rain;";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($result)){
+    $weather_rain_value[] = $row["Value"];
 }
 
 

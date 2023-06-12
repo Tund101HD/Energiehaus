@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta http-equiv="refresh" content="60">
+    <meta http-equiv="refresh" content="300">
 
     <!--[if !IE]> -->
     <link href="stylesheets/data.css" media="only screen" rel="stylesheet" type="text/css"/>
@@ -102,7 +102,7 @@
         options: {
             title: {
                 display: true,
-                text: 'Chart JS Line Chart Example'
+                text: 'Temperatur Diagramm'
             }
         }
     };
@@ -127,7 +127,7 @@
         options: {
             title: {
                 display: true,
-                text: 'Chart JS Line Chart Example'
+                text: 'Luftfeuchtigkeitsdiagramm'
             }
         }
     };

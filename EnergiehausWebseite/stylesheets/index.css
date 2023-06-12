@@ -24,10 +24,8 @@ body::-webkit-scrollbar {
 .card1 {
     object-fit: contain;
     position: absolute;
-
     bottom: 0;
-    left: 25%;
-
+    left: 22%;
     color: rgb(213, 213, 213);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(5px);
@@ -44,9 +42,8 @@ body::-webkit-scrollbar {
 .card2 {
     object-fit: contain;
     position: absolute;
-
+    left: 42.5%;
     bottom: 0;
-    left: 45%;
 
     color: rgb(213, 213, 213);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -58,15 +55,14 @@ body::-webkit-scrollbar {
     padding: 2em;
     margin: 1em;
     width: 50%;
-    max-width: 200px
+    max-width: 220px
 }
 
 .card3 {
     object-fit: contain;
     position: absolute;
-
+    left: 64%;
     bottom: 0;
-    left: 65%;
 
     color: rgb(213, 213, 213);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -80,7 +76,6 @@ body::-webkit-scrollbar {
     width: 50%;
     max-width: 200px
 }
-
 
 
 

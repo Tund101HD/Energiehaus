@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta http-equiv="refresh" content="60">
+    <meta http-equiv="refresh" content="300">
 
     <!--[if !IE]> -->
     <link href="stylesheets/index.css" media="only screen" rel="stylesheet" type="text/css"/>
@@ -68,26 +68,27 @@
 
     ?>
 
-    <div class="card1">
-        <div class="weather">
-            <h2 class="heading">Temperatur</h2>
-            <div class="temperature">Temperatur: <strong id="temperature"><?php echo $temperature ?></strong>°C</div>
-        </div>
+    <div class="card-holder">
+                <div class="card1">
+                    <div class="weather">
+                        <h2 class="heading">Temperatur</h2>
+                        <div class="temperature">Temperatur: <strong id="temperature"><?php echo $temperature ?></strong>°C</div>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="weather">
+                        <h2 class="heading">Windgeschw.</h2>
+                        <div class="wind">Windgeschwindigkeit: <strong id="wind"><?php echo $windspd ?></strong> m/s</div>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="weather">
+                        <h2 class="heading">Feuchtigkeit</h2>
+                        <div class="humidity">Luftfeuchtigkeit: <strong id="humidity"><?php echo $humidity ?></strong>%</div>
+                    </div>
+                </div>
     </div>
 
-    <div class="card2">
-        <div class="weather">
-            <h2 class="heading">Windgeschw.</h2>
-            <div class="wind">Windgeschwindigkeit: <strong id="wind"><?php echo $windspd ?></strong> m/s</div>
-        </div>
-    </div>
-
-    <div class="card3">
-        <div class="weather">
-            <h2 class="heading">Feuchtigkeit</h2>
-            <div class="humidity">Luftfeuchtigkeit: <strong id="humidity"><?php echo $humidity ?></strong>%</div>
-        </div>
-    </div>
 </div>
 
 </body>

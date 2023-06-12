@@ -23,6 +23,7 @@ include_once "includes/fetch_all_values.php";
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="refresh" content="300">
 
     <!--[if !IE]> -->
     <link href="stylesheets/wetterstation.css" media="only screen" rel="stylesheet" type="text/css"/>
@@ -98,6 +99,14 @@ include_once "includes/fetch_all_values.php";
                     <canvas id="windspd-chart"></canvas>
                 </div>
             </div>
+            <div>
+                <div class="gustspd-chart-holder">
+                    <canvas id="gustspd-chart"></canvas>
+                </div>
+                <div class="rain-chart-holder">
+                    <canvas id="rain-chart"></canvas>
+                </div>
+            </div>
 
         </div>
 
@@ -111,6 +120,11 @@ include_once "includes/fetch_all_values.php";
         const windspd = <?php echo json_encode($weather_windspd_value);?>;
         const airpr_time = <?php echo json_encode($weather_airpr_time);?>;
         const airpr = <?php echo json_encode($weather_airpr_value);?>;
+        const gustspd_time = <?php echo json_encode($weather_gustspd_time);?>;
+        const gustspd = <?php echo json_encode($weather_gustspd_value);?>;
+        const rain_time = <?php echo json_encode($weather_rain_time);?>;
+        const rain = <?php echo json_encode($weather_rain_value);?>;
+
 
 
 
@@ -208,6 +222,52 @@ include_once "includes/fetch_all_values.php";
             }
         };
         const linechart4 = new Chart(document.getElementById("airpr-chart").getContext("2d"), config4)
+
+        data= {
+            labels : gustspd_time,
+            datasets : [
+                {
+                    data : gustspd,
+                    label : "Böengeschwindigkeit in m/s",
+                    borderColor : "#2156c2",
+                    fill : false
+                }]
+        };
+
+        const config5 = {
+            type: 'line',
+            data,
+            options: {
+                title: {
+                    display: true,
+                    text: 'Böengeschw.-Diagramm'
+                }
+            }
+        };
+        const linechart5 = new Chart(document.getElementById("gustspd-chart").getContext("2d"), config5)
+
+        data= {
+            labels : rain_time,
+            datasets : [
+                {
+                    data : rain,
+                    label : "Regenmenge in mm",
+                    borderColor : "#2156c2",
+                    fill : false
+                }]
+        };
+
+        const config6 = {
+            type: 'line',
+            data,
+            options: {
+                title: {
+                    display: true,
+                    text: 'Regendiagramm'
+                }
+            }
+        };
+        const linechart6 = new Chart(document.getElementById("rain-chart").getContext("2d"), config6)
     </script>
 </div>
 

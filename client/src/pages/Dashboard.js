@@ -1,16 +1,10 @@
 import React, {useEffect, useState} from "react";
 import Axios from "axios";
-import bg1 from "../imgs/Backgrounds/BG1.jpeg"
-import bg2 from "../imgs/Backgrounds/BG2.jpeg"
-import bg3 from "../imgs/Backgrounds/BG3.jpeg"
-import bg4 from "../imgs/Backgrounds/BG4.jpeg"
-import bg5 from "../imgs/Backgrounds/BG5.jpeg"
-import bg6 from "../imgs/Backgrounds/BG6.jpeg"
-import bg7 from "../imgs/Backgrounds/BG7.jpeg"
-import bg8 from "../imgs/Backgrounds/BG8.jpeg"
 import logo from "../imgs/Logos/GISNY.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
+import randomizeBackground from "../components/utils/randomizeBackground";
 
 
 function getLastHumidityValue(){
@@ -44,6 +38,8 @@ function getLastWspeedValue(){
     })
 }
 function Dashboard(){
+    const navigate = useNavigate();
+
     const [select, setSelect] = useState(false);
     let blackBg = <div></div>
     let settingsWnd = <div> </div>
@@ -62,15 +58,29 @@ function Dashboard(){
                                                                              text-center text-white mobile:text-lg md:text-xl
                                                                              bg-native-green hover:bg-native-green-hover
                                                                              border-black border-2 rounded-2xl
-                                                                             p-5">
+                                                                             p-5" onClick={()=>navigate("/database")}>
                                 Datenbank
                             </div>
                             <div id="dashboard-settings-wetterstation" className="w-full h-13p
                                                                              text-center text-white mobile:text-lg md:text-xl
                                                                              bg-native-green hover:bg-native-green-hover
                                                                              border-black border-2 rounded-2xl
-                                                                             p-5">
+                                                                             p-5" onClick={()=>navigate("/weatherstation")}>
                                 Wetterstation
+                            </div>
+                            <div id="dashboard-settings-wetterstation" className="w-full h-13p
+                                                                             text-center text-white mobile:text-lg md:text-xl
+                                                                             bg-native-green hover:bg-native-green-hover
+                                                                             border-black border-2 rounded-2xl
+                                                                             p-5" onClick={()=>navigate("/sensors")}>
+                                Sensorik
+                            </div>
+                            <div id="dashboard-settings-wetterstation" className="w-full h-13p
+                                                                             text-center text-white mobile:text-lg md:text-xl
+                                                                             bg-native-green hover:bg-native-green-hover
+                                                                             border-black border-2 rounded-2xl
+                                                                             p-5" onClick={()=>navigate("/impressum")}>
+                                Impressum
                             </div>
                       </div>
         settingsSelect = <div></div>
@@ -80,11 +90,7 @@ function Dashboard(){
         const runOnMount = async () => {
             //Background selection
             let root = document.getElementById("dashboard-root-parent")
-            const pictureArray = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8];
-            const randomIndex = Math.floor(Math.random() * pictureArray.length);
-            const selectedPicture = pictureArray[randomIndex];
-            console.log(selectedPicture);
-            root.style.backgroundImage = 'url(' + selectedPicture + ')';
+            randomizeBackground(root)
 
             //Database Values
             let humidity = (await getLastHumidityValue()).data[0]['Value'];

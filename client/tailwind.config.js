@@ -29,8 +29,8 @@ module.exports = {
                 "box-bg" : "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
                 "box-border": "rgba(255, 255, 255, 0.18)",
                 "native-green": "#009688",
-                "native-green-hover": "#08524a"
-
+                "native-green-hover": "#08524a",
+                "native-gradient": "linear-gradient(135deg, rgba(8, 82, 74, 1), rgba(0, 150, 136, 1))",
             },
             spacing : {
                 '200p' : "200%",
@@ -57,6 +57,7 @@ module.exports = {
                 '10p' : "10%",
                 '8p' : "8%",
                 '6p' : "6%",
+                '5p' : "5%",
                 '1/5' : "20%",
                 '13p' : "13%",
                 '100' : "32rem",

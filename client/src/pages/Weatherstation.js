@@ -57,31 +57,58 @@ function Weatherstation(){
     useEffect(() => {
         const runOnMount = async () => {
             //Background selection
-            let root = document.getElementById("database-root-parent")
+            let root = document.getElementById("weatherstation-root-parent")
             randomizeBackground(root)
         }
         runOnMount().then(r => console.log("Component successfully mounted"))
     }, [])
 
     return(
-        <div className="w-screen h-screen bg-cover" id="database-root-parent" onClick={()=>setSelect(false)}>
+        <div className="h-fit w-full">
+            <div className="w-fullF h-screen bg-cover overflow-x-hidden" id="weatherstation-root-parent" onClick={()=>setSelect(false)}>
 
-            <div className="
-                               w-screen h-screen
+                <div className="
+                               w-fullF h-screen
                                bg-black-t-50 top-0 left-0 absolute
                                flex items-center justify-center
                                ">
-                <div className="flex items-start justify-between">
-                    <img src={logo} alt="" className="absolute top-10 left-10 h-8p w-15p"/>
-                    {settingsSelect}
+                    <div className="flex items-start justify-between">
+                        <img src={logo} alt="" className="absolute top-10 left-10 h-8p w-15p"/>
+                        {settingsSelect}
+                    </div>
+                    <div className="text-white w-fit h-fit text-center" id="weatherstation-desc-text">
+                        <p className="xl:text-8xl md:text-6xl mobile:text-4xl"> Alle Daten unserer Sensoren</p>
+                        <p className="xl:text-4xl md:text-2xl mobile:text-lg pt-5">Kompakt auf einer Seite dargestellt.</p>
+                    </div>
                 </div>
-                <div className="text-white w-fit h-fit text-center" id="database-desc-text">
-                    <p className="xl:text-8xl md:text-6xl mobile:text-4xl"> Die Energiehaus Wetterstation. </p>
-                    <p className="xl:text-4xl md:text-2xl mobile:text-lg pt-5">Zugriff auf unsere Daten. Sofort. Von Überall.</p>
+                {blackBg}
+                {settingsWnd}
+            </div>
+            <div className="h-400 w-fullF bg-gradient-to-br from-native-green to-native-green-hover overflow-x-hidden " id="weatherstation-scroll-container">
+                <div className="h-5p w-full
+                                text-white text-5xl text-center
+                                flex justify-center items-center">
+                    Unsere Wetterstation - Kurz beschrieben
+                </div>
+                <div className="h-fit w-full flex justify-center items-center">
+                    <div className="h-fit w-75p
+                                    text-white text-3xl
+                                    ">
+                        Das Energiehaus besitzt auf der Nordwest seite seines Hauses
+                        eine Wetterstation, die jede Minute Informationen über die
+                        Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit, Regenmenge
+                        und mehr Werte sammelt. Auf dieser Seite könnt ihr die
+                        aktuellsten Werte abrufen und euch anzeigen lassen.
+                    </div>
+                </div>
+                <div className="h-fit w-full flex justify-center items-center" onClick={()=>navigate("/impressum")}>
+                    <div className="h-fit w-75p
+                                    text-white text-xl text-center
+                                    ">
+                        (Sollte dies der Wunsch sein, bitte kontaktiert uns!)
+                    </div>
                 </div>
             </div>
-            {blackBg}
-            {settingsWnd}
         </div>
     );
 }

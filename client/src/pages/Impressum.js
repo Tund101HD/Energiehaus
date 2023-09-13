@@ -3,6 +3,10 @@ import Axios from "axios";
 import logo from "../imgs/Logos/GISNY.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
+import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 import randomizeBackground from "../components/utils/randomizeBackground";
 
@@ -57,31 +61,136 @@ function Impressum(){
     useEffect(() => {
         const runOnMount = async () => {
             //Background selection
-            let root = document.getElementById("database-root-parent")
+            let root = document.getElementById("impressum-root-parent")
             randomizeBackground(root)
         }
         runOnMount().then(r => console.log("Component successfully mounted"))
     }, [])
 
     return(
-        <div className="w-screen h-screen bg-cover" id="database-root-parent" onClick={()=>setSelect(false)}>
+        <div className="h-fit w-full">
+            <div className="w-fullF h-screen bg-cover overflow-x-hidden" id="impressum-root-parent" onClick={()=>setSelect(false)}>
 
-            <div className="
-                               w-screen h-screen
+                <div className="
+                               w-fullF h-screen
                                bg-black-t-50 top-0 left-0 absolute
                                flex items-center justify-center
                                ">
-                <div className="flex items-start justify-between">
-                    <img src={logo} alt="" className="absolute top-10 left-10 h-8p w-15p"/>
-                    {settingsSelect}
+                    <div className="flex items-start justify-between">
+                        <img src={logo} alt="" className="absolute top-10 left-10 h-8p w-15p"/>
+                        {settingsSelect}
+                    </div>
+                    <div className="text-white w-fit h-fit text-center top-13p" id="impressum-desc-text">
+                        <p className="xl:text-8xl md:text-6xl mobile:text-4xl"> Impressum</p>
+                    </div>
                 </div>
-                <div className="text-white w-fit h-fit text-center" id="database-desc-text">
-                    <p className="xl:text-8xl md:text-6xl mobile:text-4xl"> Die Energiehaus Wetterstation. </p>
-                    <p className="xl:text-4xl md:text-2xl mobile:text-lg pt-5">Zugriff auf unsere Daten. Sofort. Von Überall.</p>
-                </div>
+                {blackBg}
+                {settingsWnd}
             </div>
-            {blackBg}
-            {settingsWnd}
+            <div className="h-400 w-fullF bg-gradient-to-br from-native-green to-native-green-hover overflow-x-hidden" id="impressum-scroll-container">
+
+                <div className="w-full h-fit flex justify-center pt-10" id="impressum-scroll-textcontainer">
+                    <div className="h-fit w-fit" id="impressum-scroll-contributors">
+                        <div className="h-5p w-full
+                                text-white text-5xl text-center
+                                flex justify-center items-center">
+                            Mitwirkende
+                        </div>
+                        <div className="h-fit w-full flex justify-center items-center">
+                            <div className="h-fit w-75p
+                                    text-white text-3xl
+                                    ">
+                                <ul className="list-none">
+                                    <li className="p-3">Schulleitung: Jochen Müller  </li>
+                                    <li className="p-3">Energiehausleitung: David Ahmann und Christian Schättiger</li>
+                                    <li className="p-3"> Bau der Wetterstation: Jella Müller </li>
+                                    <li className="p-3">Website-Design: Philipp Wolf </li>
+                                    <li className="p-3">Backend-Design: Luca Perri </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="h-fit w-fit">
+                        <div className="h-5p w-full
+                                text-white text-5xl text-center
+                                flex justify-center items-center">
+                            Kontaktdaten
+                        </div>
+                        <div className="h-fit w-full flex justify-center items-center">
+                            <div className="h-fit w-75p
+                                    text-white text-3xl
+                                    ">
+                                <ul className="list-none">
+                                    <li className="p-3">Gymnasium Isny: +49(0) 07562 97565</li>
+                                    <li className="p-3">Luca Perri: <br/> schueler-luca.perri@gisny.wwschool.de</li>
+                                    <li className="p-3">Unser Github: https://github.com/Tund101HD/Energiehaus</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full h-fit flex justify-center items-center pt-32" id="impressum-scroll-helpcontainer">
+                    <div className="w-75p h-fit">
+                        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+                            <div className="pl-5">
+                                <FontAwesomeIcon icon={faArrowRight}/> Was darf ich alles mit den Daten machen?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
+                    <div className="w-75p h-fit">
+                        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+                            <div className="pl-5">
+                                <FontAwesomeIcon icon={faArrowRight}/> Wie kann ich alle Daten aus der Datenbank abrufen?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
+                    <div className="w-75p h-fit">
+                        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+                            <div className="pl-5">
+                                <FontAwesomeIcon icon={faArrowRight}/> An wen soll ich mich wenden, wenn ich einen anderen Sensor will?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
+                    <div className="w-75p h-fit">
+                        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+                            <div className="pl-5">
+                                <FontAwesomeIcon icon={faArrowRight}/> Was ist das Energiehaus/Warum gibt es dieses Projekt?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
+                    <div className="w-75p h-fit">
+                        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+                            <div className="pl-5">
+                                <FontAwesomeIcon icon={faArrowRight}/> Kann ich bei dem Projekt mitmachen/Kann ich die Website erweitern?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 }

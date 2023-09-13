@@ -57,7 +57,7 @@ function Sensors(){
     useEffect(() => {
         const runOnMount = async () => {
             //Background selection
-            let root = document.getElementById("database-root-parent")
+            let root = document.getElementById("sensors-root-parent")
             randomizeBackground(root)
         }
         runOnMount().then(r => console.log("Component successfully mounted"))
@@ -65,7 +65,7 @@ function Sensors(){
 
     return(
         <div className="h-fit w-full">
-            <div className="w-fullF h-screen bg-cover overflow-x-hidden" id="database-root-parent" onClick={()=>setSelect(false)}>
+            <div className="w-fullF h-screen bg-cover overflow-x-hidden" id="sensors-root-parent" onClick={()=>setSelect(false)}>
 
                 <div className="
                                w-fullF h-screen
@@ -76,7 +76,7 @@ function Sensors(){
                         <img src={logo} alt="" className="absolute top-10 left-10 h-8p w-15p"/>
                         {settingsSelect}
                     </div>
-                    <div className="text-white w-fit h-fit text-center" id="database-desc-text">
+                    <div className="text-white w-fit h-fit text-center" id="sensors-desc-text">
                         <p className="xl:text-8xl md:text-6xl mobile:text-4xl"> Alle Daten unserer Sensoren</p>
                         <p className="xl:text-4xl md:text-2xl mobile:text-lg pt-5">Kompakt auf einer Seite dargestellt.</p>
                     </div>
@@ -84,7 +84,7 @@ function Sensors(){
                 {blackBg}
                 {settingsWnd}
             </div>
-            <div className="h-400 w-fullF bg-gradient-to-br from-native-green to-native-green-hover overflow-x-hidden " id="database-scroll-container">
+            <div className="h-400 w-fullF bg-gradient-to-br from-native-green to-native-green-hover overflow-x-hidden " id="sensors-scroll-container">
                 <div className="h-5p w-full
                                 text-white text-5xl text-center
                                 flex justify-center items-center">

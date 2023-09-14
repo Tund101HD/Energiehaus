@@ -13,8 +13,201 @@ import randomizeBackground from "../components/utils/randomizeBackground";
 function Impressum(){
     const navigate = useNavigate();
     const [select, setSelect] = useState(false);
+
+    const [first, setFirst] = useState(false);
+    const [second, setSecond] = useState(false);
+    const [third, setThird] = useState(false);
+    const [fourth, setFourth] = useState(false);
+    const [fifth, setFifth] = useState(false);
+
     let blackBg = <div></div>
     let settingsWnd = <div> </div>
+
+
+
+    {/*FAQ settings section */}
+    let firstCard =
+        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+            <div className="pl-5">
+                <FontAwesomeIcon icon={faArrowRight}/> Was darf ich alles mit den Daten machen?
+            </div>
+        </div>
+    let secondCard =
+        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+            <div className="pl-5">
+                <FontAwesomeIcon  icon={faArrowRight}/> Wie kann ich alle Daten aus der Datenbank abrufen?
+            </div>
+        </div>
+    let thirdCard =
+        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+            <div className="pl-5">
+                <FontAwesomeIcon icon={faArrowRight}/> An wen soll ich mich wenden, wenn ich einen anderen Sensor will?
+            </div>
+        </div>
+    let fourthCard =
+        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+            <div className="pl-5">
+                <FontAwesomeIcon icon={faArrowRight}/> Was ist das Energiehaus/Warum gibt es dieses Projekt?
+            </div>
+        </div>
+    let fifthCard =
+        <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-2xl">
+            <div className="pl-5">
+                <FontAwesomeIcon icon={faArrowRight}/> Kann ich bei dem Projekt mitmachen/Kann ich die Website erweitern?
+            </div>
+        </div>
+
+
+
+    let firstFAQ = <div></div>
+    let secondFAQ = <div></div>
+    let thirdFAQ = <div></div>
+    let fourthFAQ = <div></div>
+    let fifthFAQ = <div></div>
+
+    function resetFAQ(){
+        setFirst(false)
+        setSecond(false)
+        setThird(false)
+        setFourth(false)
+        setFifth(false)
+    }
+    if(first){
+        firstFAQ =
+            <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
+                <div className="w-85p h-fit text-2xl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.
+                </div>
+            </div>
+        firstCard = <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-t-2xl shadow-2xl">
+            <div className="pl-5">
+                <FontAwesomeIcon icon={faArrowDown}/> Was darf ich alles mit den Daten machen?
+            </div>
+        </div>
+    }
+
+    if(second){
+        secondFAQ =
+            <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
+                <div className="w-85p h-fit text-2xl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.
+                </div>
+            </div>
+
+        secondCard =
+            <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-t-2xl shadow-2xl">
+                <div className="pl-5">
+                    <FontAwesomeIcon  icon={faArrowDown}/> Wie kann ich alle Daten aus der Datenbank abrufen?
+                </div>
+            </div>
+    }
+
+    if(third){
+
+        thirdFAQ =
+            <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
+                <div className="w-85p h-fit text-2xl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.
+                </div>
+            </div>
+
+        thirdCard =
+            <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-t-2xl shadow-2xl">
+                <div className="pl-5">
+                    <FontAwesomeIcon icon={faArrowDown}/> An wen soll ich mich wenden, wenn ich einen anderen Sensor will?
+                </div>
+            </div>
+
+    }
+
+    if(fourth){
+        fourthFAQ =
+            <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
+                <div className="w-85p h-fit text-2xl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.
+                </div>
+            </div>
+        fourthCard =
+            <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-t-2xl shadow-2xl">
+                <div className="pl-5">
+                    <FontAwesomeIcon icon={faArrowDown}/> Was ist das Energiehaus/Warum gibt es dieses Projekt?
+                </div>
+            </div>
+    }
+    if(fifth){
+        fifthFAQ =
+            <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
+                <div className="w-85p h-fit text-2xl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.
+                </div>
+            </div>
+        fifthCard =
+            <div className="w-full h-28 flex items-center
+                                        bg-white text-4xl
+                                        rounded-t-2xl shadow-2xl">
+                <div className="pl-5">
+                    <FontAwesomeIcon icon={faArrowDown}/> Kann ich bei dem Projekt mitmachen/Kann ich die Website erweitern?
+                </div>
+            </div>
+    }
+
+
+
+
+
     let settingsSelect = <div className="xl:w-14 xl:h-14 xl:text-3xl
                                     absolute top-0 right-0
                                     mobile:w-10 mobile:h-10  mobile:text-2xl
@@ -130,63 +323,33 @@ function Impressum(){
                     </div>
                 </div>
                 <div className="w-full h-fit flex justify-center items-center pt-32" id="impressum-scroll-helpcontainer">
-                    <div className="w-75p h-fit">
-                        <div className="w-full h-28 flex items-center
-                                        bg-white text-4xl
-                                        rounded-2xl">
-                            <div className="pl-5">
-                                <FontAwesomeIcon icon={faArrowRight}/> Was darf ich alles mit den Daten machen?
-                            </div>
-                        </div>
-
+                    <div className="w-75p h-fit" onMouseEnter={()=>setFirst(true)} onMouseLeave={()=>resetFAQ()}>
+                        {firstCard}
+                        {firstFAQ}
                     </div>
                 </div>
                 <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
-                    <div className="w-75p h-fit">
-                        <div className="w-full h-28 flex items-center
-                                        bg-white text-4xl
-                                        rounded-2xl">
-                            <div className="pl-5">
-                                <FontAwesomeIcon icon={faArrowRight}/> Wie kann ich alle Daten aus der Datenbank abrufen?
-                            </div>
-                        </div>
-
+                    <div className="w-75p h-fit" onMouseEnter={()=>setSecond(true)} onMouseLeave={()=>resetFAQ()}>
+                        {secondCard}
+                        {secondFAQ}
                     </div>
                 </div>
                 <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
-                    <div className="w-75p h-fit">
-                        <div className="w-full h-28 flex items-center
-                                        bg-white text-4xl
-                                        rounded-2xl">
-                            <div className="pl-5">
-                                <FontAwesomeIcon icon={faArrowRight}/> An wen soll ich mich wenden, wenn ich einen anderen Sensor will?
-                            </div>
-                        </div>
-
+                    <div className="w-75p h-fit" onMouseEnter={()=>setThird(true)} onMouseLeave={()=>resetFAQ()}>
+                        {thirdCard}
+                        {thirdFAQ}
                     </div>
                 </div>
                 <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
-                    <div className="w-75p h-fit">
-                        <div className="w-full h-28 flex items-center
-                                        bg-white text-4xl
-                                        rounded-2xl">
-                            <div className="pl-5">
-                                <FontAwesomeIcon icon={faArrowRight}/> Was ist das Energiehaus/Warum gibt es dieses Projekt?
-                            </div>
-                        </div>
-
+                    <div className="w-75p h-fit"  onMouseEnter={()=>setFourth(true)} onMouseLeave={()=>resetFAQ()}>
+                        {fourthCard}
+                        {fourthFAQ}
                     </div>
                 </div>
                 <div className="w-full h-fit flex justify-center items-center pt-10" id="impressum-scroll-helpcontainer">
-                    <div className="w-75p h-fit">
-                        <div className="w-full h-28 flex items-center
-                                        bg-white text-4xl
-                                        rounded-2xl">
-                            <div className="pl-5">
-                                <FontAwesomeIcon icon={faArrowRight}/> Kann ich bei dem Projekt mitmachen/Kann ich die Website erweitern?
-                            </div>
-                        </div>
-
+                    <div className="w-75p h-fit" onMouseEnter={()=>setFifth(true)} onMouseLeave={()=>resetFAQ()}>
+                        {fifthCard}
+                        {fifthFAQ}
                     </div>
                 </div>
 

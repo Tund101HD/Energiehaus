@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
-import Axios from "axios";
 import logo from "../imgs/Logos/GISNY.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 import randomizeBackground from "../components/utils/randomizeBackground";
+import DailyTempchart from "../components/charts/temperature/Daily-Tempchart";
+import DailyHumiditychart from "../components/charts/humidity/Daily-Humiditychart";
+
 
 function Weatherstation(){
     const navigate = useNavigate();
@@ -108,6 +110,20 @@ function Weatherstation(){
                         (Sollte dies der Wunsch sein, bitte kontaktiert uns!)
                     </div>
                 </div>
+
+                <div className="w-full flex justify-center pt-13p">
+                    <div className="w-95p h-fit flex justify-center items-center bg-white rounded-2xl s">
+                        <div className="h-30p w-40p">
+                            <DailyTempchart/>
+                        </div>
+                        <div className="h-30p w-40p">
+                            <DailyHumiditychart/>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     );

@@ -12,6 +12,18 @@ let mysql = new MySql();
 app.get("/", (re, res) => {
     res.send("Hello world")
 })
+app.get("/values/all/temperature", async (re, res) => {
+    let resp = await mysql.getAllTemperatureValues()
+    console.log("Executed request getAllValue-Temperature")
+    res.send(await mysql.getAllTemperatureValues())
+})
+app.get("/values/all/humidity", async (re, res) => {
+    let resp = await mysql.getAllHumidityValues()
+    console.log("Executed request getAllValue-Humidity")
+    res.send(await mysql.getAllHumidityValues())
+})
+
+
 app.get("/values/single/humidity", async (re, res) => {
     let resp = await mysql.getLastHumidityValue()
     console.log("Executed request getSingleValue-Humidity")
@@ -25,6 +37,8 @@ app.get("/values/single/wspeed", async (re, res) => {
     console.log("Executed request getSingleValue-Windspeed")
     res.send(await mysql.getLastWindSpeedValue())
 })
+
+
 app.listen(3001,  ()=>{
     console.log("[Info] Server running on Port 3001.")
 })

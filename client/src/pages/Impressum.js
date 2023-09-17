@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from "react";
-import Axios from "axios";
 import logo from "../imgs/Logos/GISNY.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
-import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
-import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 import randomizeBackground from "../components/utils/randomizeBackground";
 
@@ -25,7 +22,7 @@ function Impressum(){
 
 
 
-    {/*FAQ settings section */}
+    /* FAQ settings section */
     let firstCard =
         <div className="w-full h-28 flex items-center
                                         bg-white text-4xl
@@ -86,14 +83,12 @@ function Impressum(){
         firstFAQ =
             <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
                 <div className="w-85p h-fit text-2xl">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
+                    Die Daten stehen jedem zur freien Verfügung. Primär sind sie dazu gedacht, am
+                    Gymnasium Isny als Forschungsdaten zu dienen, damit Schülerinnen und
+                    Schüler aus den Daten Grafiken, Studien oder Nachforschungen erstellen können,
+                    für z.B. eine GFS.
+                    Wir freuen uns trotzdem über jedes Projekt das mit unseren Daten verwirklicht wird
+                    und befürworten auch eine Nutzung außerhalb unsere Schule.
                 </div>
             </div>
         firstCard = <div className="w-full h-28 flex items-center
@@ -109,14 +104,13 @@ function Impressum(){
         secondFAQ =
             <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
                 <div className="w-85p h-fit text-2xl">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
+                    Unsere Datenbank läuft separat zur Website auf einer eignen Subdomain. Diese
+                    dient euch als REST-API, womit ihr Daten ganz einfach mit einer GET oder POST
+                    Request abrufen könnt.  <br/>
+                    Eine ausführliche Dokumentation findet ihr in unserem Github-Repository, dort
+                    sind alle wichtigen Informationen aufgelistet und ihr findet dort auch Beispiele.
+                    Bitte bedenkt, dass unsere Datenbank monetär bedingt nur eine begrenzte Rechenleistung hat
+                    und ihr eure Anfragen so effizient wie möglich gestaltet.
                 </div>
             </div>
 
@@ -135,14 +129,10 @@ function Impressum(){
         thirdFAQ =
             <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
                 <div className="w-85p h-fit text-2xl">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
+                    Bitte wendet euch an Luca Perri oder Philipp Wolf, sollten die nicht
+                    mehr auf der Schule sein, wendet euch an die Energiehausleitung.
+                    Jeder neuer Sensor der eingebaut wird, kriegt eine eigene Tabelle
+                    in der Datenbank und muss daher programmiert werden.
                 </div>
             </div>
 
@@ -182,16 +172,19 @@ function Impressum(){
     }
     if(fifth){
         fifthFAQ =
-            <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
+            <div className="w-full h-96 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
                 <div className="w-85p h-fit text-2xl">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
+                    Die Energie-AG sucht immer neue motivierte Mitglieder die sich
+                    für das Projekt interessieren. Das einzige was ihr mitbringen müsst
+                    sind Motivation, Interesse und Freude an der Sache. Stand jetzt müsst
+                    ihr mindestens in der 8. Klasse sein, um dem Energiehaus beitreten zu können. <br/>
+                    Wendet euch an Herr Ahmann oder Herr Schättiger für weitere Informationen <br/>
+                    <br/>
+                    Des weiteren gibt es die Möglichkeit, an dieser Website zu arbeiten. Wenn ihr euch
+                    dafür interessiert, traut euch ruhig unser Github-Repository zu Forken und eure eigenen
+                    Erweiterungen zu erstellen. Auf unserem Repository findet ihr auch Informationen
+                    zu den Bibliotheken die benutzt wurden und einigen Formalitäten die ihr beachten
+                    solltet.
                 </div>
             </div>
         fifthCard =
@@ -257,7 +250,7 @@ function Impressum(){
             let root = document.getElementById("impressum-root-parent")
             randomizeBackground(root)
         }
-        runOnMount().then(r => console.log("Component successfully mounted"))
+        runOnMount().then(() => console.log("Component successfully mounted"))
     }, [])
 
     return(

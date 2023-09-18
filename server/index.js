@@ -22,6 +22,23 @@ app.get("/values/all/humidity", async (re, res) => {
     console.log("Executed request getAllValue-Humidity")
     res.send(await mysql.getAllHumidityValues())
 })
+app.get("/values/all/windspd", async (re, res) => {
+    let resp = await mysql.getAllWindspeedValues()
+    console.log("Executed request getAllValue-Humidity")
+    res.send(await mysql.getAllWindspeedValues())
+})
+app.get("/values/all/rain", async (re, res) => {
+    let resp = await mysql.getAllRainValues()
+    console.log("Executed request getAllValue-Humidity")
+    res.send(await mysql.getAllRainValues())
+})
+app.get("/values/all/gustspd", async (re, res) => {
+    let resp = await mysql.getAllGustspeedValues()
+    console.log("Executed request getAllValue-Humidity")
+    res.send(await mysql.getAllGustspeedValues())
+})
+
+
 
 
 app.get("/values/single/humidity", async (re, res) => {

@@ -502,6 +502,15 @@ video {
 .top-13p {
   top: 13%;
 }
+.col-auto {
+  grid-column: auto;
+}
+.ml-13p {
+  margin-left: 13%;
+}
+.ml-20p {
+  margin-left: 20%;
+}
 .flex {
   display: flex;
 }

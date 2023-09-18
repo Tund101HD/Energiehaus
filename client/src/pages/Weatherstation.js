@@ -6,6 +6,8 @@ import {useNavigate} from "react-router-dom";
 import randomizeBackground from "../components/utils/randomizeBackground";
 import DailyTempchart from "../components/charts/temperature/Daily-Tempchart";
 import DailyHumiditychart from "../components/charts/humidity/Daily-Humiditychart";
+import DailyGustspeedchart from "../components/charts/gustspeed/Daily-GustspeedChart";
+import DailyRainchart from "../components/charts/rain/Daily-RainChart";
 
 
 function Weatherstation(){
@@ -113,12 +115,34 @@ function Weatherstation(){
 
                 <div className="w-full flex justify-center pt-13p">
                     <div className="w-95p h-fit flex justify-center items-center bg-white rounded-2xl s">
-                        <div className="h-30p w-40p">
-                            <DailyTempchart/>
-                        </div>
-                        <div className="h-30p w-40p">
-                            <DailyHumiditychart/>
-                        </div>
+
+                        <ul className="h-full w-full ml-13p">
+                            <div className="w-full h-full">
+                                <li className="flex col-auto">
+                                        <div className="h-30p w-40p">
+                                            <DailyTempchart/>
+                                        </div>
+                                        <div className="h-30p w-40p">
+                                            <DailyHumiditychart/>
+                                        </div>
+                                </li>
+                                <li className="flex col-auto">
+                                    <div className="h-30p w-40p">
+                                        <DailyGustspeedchart/>
+                                    </div>
+                                    <div className="h-30p w-40p">
+                                        <DailyHumiditychart/>
+                                    </div>
+                                </li>
+                                <li className="flex col-auto">
+                                    <div className="h-30p w-40p ml-20p">
+                                        <DailyRainchart/>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+
+
                     </div>
                 </div>
 

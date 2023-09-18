@@ -25,6 +25,18 @@ class MySql {
         let query = "SELECT * FROM prod.weather_humidity"
         return this.doQuery(query)
     }
+    getAllWindspeedValues(){
+        let query = "SELECT * FROM prod.weather_windspd"
+        return this.doQuery(query)
+    }
+    getAllRainValues(){
+        let query = "SELECT * FROM prod.weather_rain"
+        return this.doQuery(query)
+    }
+    getAllGustspeedValues(){
+        let query = "SELECT * FROM prod.weather_gustspd"
+        return this.doQuery(query)
+    }
 
 
 

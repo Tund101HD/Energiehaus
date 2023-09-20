@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -29,3 +30,9 @@ yarn-error.log*
 /.idea/workspace.xml
 /.idea/modules.xml
 /.idea/inspectionProfiles/
+=======
+.idea
+Old Website/scripts/.env
+.gitignore
+node_modules
+>>>>>>> 2ac4299d34a66272cfaf251e1a2b542ec19d4041

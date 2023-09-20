@@ -5,6 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 import randomizeBackground from "../components/utils/randomizeBackground";
+import {Tooltip, Zoom} from "@mui/material";
 
 function Sensors(){
     const navigate = useNavigate();
@@ -110,6 +111,20 @@ function Sensors(){
                         (Sollte dies der Wunsch sein, bitte kontaktiert uns!)
                     </div>
                 </div>
+
+                <Tooltip title="Leider fehlen uns noch die Daten um Ihnen sinnvolle Diagramme anzuzeigen!
+                                Daher wird dieses Feature erst in kürze hinzugefügt!"
+                         TransitionComponent={Zoom}
+                >
+                    <div className="h-fit w-full flex justify-center items-center   pt-13p">
+                        <div className="h-8p w-75p
+                                    text-4xl text-center
+                                    bg-white rounded-2xl
+                                    ">
+                            Coming soon
+                        </div>
+                    </div>
+                </Tooltip>
             </div>
         </div>
 

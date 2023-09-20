@@ -151,14 +151,11 @@ function Impressum(){
         fourthFAQ =
             <div className="w-full h-72 bg-white rounded-b-2xl pt-3 border-t-black border-2 shadow-md flex items-center justify-center">
                 <div className="w-85p h-fit text-2xl">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
+                    Das Energiehaus ist ein Projekt des Gymnasiums Isny, dass darauf abzielt, ein Haus mit so viel
+                    Schülereigenleistung zu erschaffen, welches so Energieneutral ist wie möglich. Das Projekt wird
+                    durch Spendengelder uns Sponsoren gefördert, welche sich für das Projekt interessieren.
+                    Schüler ab der 8. Klasse können an der Energie AG Teilnehmen. Dadurch entstand über Zeit ein
+                    Haus, dass zu 90% aus Eigenbau heraus gebaut wurde.
                 </div>
             </div>
         fourthCard =
@@ -290,7 +287,7 @@ function Impressum(){
                                     <li className="p-3">Schulleitung: Jochen Müller  </li>
                                     <li className="p-3">Energiehausleitung: David Ahmann und Christian Schättiger</li>
                                     <li className="p-3"> Bau der Wetterstation: Jella Müller </li>
-                                    <li className="p-3">Website-Design: Philipp Wolf </li>
+                                    <li className="p-3">Website-Design: Philipp Wolf, Luca Perri </li>
                                     <li className="p-3">Backend-Design: Luca Perri </li>
                                 </ul>
                             </div>
@@ -309,6 +306,7 @@ function Impressum(){
                                 <ul className="list-none">
                                     <li className="p-3">Gymnasium Isny: +49(0) 07562 97565</li>
                                     <li className="p-3">Luca Perri: <br/> schueler-luca.perri@gisny.wwschool.de</li>
+                                    <li className="p-3">David Ahmann: <br/> david.ahmann@gisny.wwschool.de</li>
                                     <li className="p-3">Unser Github: https://github.com/Tund101HD/Energiehaus</li>
                                 </ul>
                             </div>
